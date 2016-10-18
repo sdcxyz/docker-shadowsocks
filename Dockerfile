@@ -7,5 +7,6 @@ RUN echo 'service  dnscrypt-proxy start' >>/bootstrap.sh
 RUN echo 'sslocal $@' >>/bootstrap.sh
 RUN chmod +x /bootstrap.sh
 EXPOSE  1080 53
+
 ENTRYPOINT ["/bootstrap.sh","-b","0.0.0.0"]
 
